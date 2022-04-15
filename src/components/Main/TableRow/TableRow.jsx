@@ -7,9 +7,9 @@ const TableRow = (props) => {
   console.log(_id);
 
   const handleDelete = () => {
-    fetch(`http://localhost:8080/findAndDelete/${_id}`).then((res) =>
-      res.json()
-    );
+    fetch(
+      `https://expenses-tracker-07.herokuapp.com/findAndDelete/${_id}`
+    ).then((res) => res.json());
     alert("Removed Successfully");
     location.reload();
   };

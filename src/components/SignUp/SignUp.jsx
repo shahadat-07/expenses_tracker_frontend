@@ -11,7 +11,7 @@ const SignUp = () => {
     event.preventDefault();
 
     await axios
-      .post("http://localhost:8080/signup", {
+      .post("https://expenses-tracker-07.herokuapp.com/signup", {
         email,
         password,
       })

@@ -20,7 +20,7 @@ const UpdateCost = ({ _id }) => {
   // console.log(userEmail);
 
   //   useEffect(() => {
-  //     fetch(`http://localhost:8080/findOne/${_id}`).then((res) => setItem(res));
+  //     fetch(`https://expenses-tracker-07.herokuapp.com/findOne/${_id}`).then((res) => setItem(res));
   // });
 
   //   fetch(`http://localhost:3030/api/allRestaurants?search=` + filter)
@@ -30,10 +30,11 @@ const UpdateCost = ({ _id }) => {
   //     });
 
   const findOne = () => {
-    fetch(`http://localhost:8080/findOne/${_id}`).then((res) =>
-      res.json().then((data) => {
-        setExpenses(data);
-      })
+    fetch(`https://expenses-tracker-07.herokuapp.com/findOne/${_id}`).then(
+      (res) =>
+        res.json().then((data) => {
+          setExpenses(data);
+        })
     );
   };
 
@@ -41,7 +42,7 @@ const UpdateCost = ({ _id }) => {
     event.preventDefault();
 
     await axios
-      .post(`http://localhost:8080/findOne/${_id}`, {
+      .post(`https://expenses-tracker-07.herokuapp.com/findOne/${_id}`, {
         userEmail,
         name,
         cost,

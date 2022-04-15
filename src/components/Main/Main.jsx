@@ -4,7 +4,7 @@ import TableRow from "./TableRow/TableRow";
 import Navbar from "./../Navbar/Navbar";
 
 const Main = () => {
-  const api = "http://localhost:8080";
+  const api = "https://expenses-tracker-07.herokuapp.com";
   const [expenses, setExpenses] = useState([]);
   // console.log(expenses);
   const [filter, setFilter] = useState("");
@@ -12,14 +12,6 @@ const Main = () => {
   const handleFilter = (event) => {
     setFilter(event.target.value);
   };
-
-  // useEffect(() => {
-  //   fetch(`http://localhost:3030/api/allRestaurants?search=` + filter)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setExpenses(data);
-  //     });
-  // }, [filter]);
 
   // Fetching Data
   const user = JSON.parse(localStorage.getItem("user"));

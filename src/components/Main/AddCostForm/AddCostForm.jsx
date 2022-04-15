@@ -18,7 +18,7 @@ const AddCostForm = () => {
     event.preventDefault();
 
     await axios
-      .post("http://localhost:8080/addExpenses", {
+      .post("https://expenses-tracker-07.herokuapp.com/addExpenses", {
         userEmail,
         name,
         cost,
