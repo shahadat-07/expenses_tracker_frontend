@@ -17,8 +17,9 @@ const SignUp = () => {
       })
       .then((res) => {
         console.log(res);
+        alert("Registration Successfull");
+        window.location.href = "/";
       });
-    .then((window.location.href = "/"));
   };
 
   return (
