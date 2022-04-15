@@ -18,7 +18,7 @@ const SignUp = () => {
       .then((res) => {
         console.log(res);
       });
-    // .then((window.location.href = "/signup"));
+    .then((window.location.href = "/"));
   };
 
   return (
