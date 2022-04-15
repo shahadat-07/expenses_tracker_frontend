@@ -16,9 +16,13 @@ const SignUp = () => {
         password,
       })
       .then((res) => {
-        console.log(res);
-        alert("Registration Successfull");
-        window.location.href = "/";
+        alert(res.data.message);
+        if (res.data.message === "Registration Sucessfull") {
+          window.location.href = "/";
+        } else {
+          // eslint-disable-next-line no-restricted-globals
+          location.reload();
+        }
       });
   };
 
